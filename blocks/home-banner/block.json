@@ -1,0 +1,14 @@
+{
+  "name": "acf/home-banner-block",
+  "title": "Home Banner",
+  "description": "Block for Hero Section",
+  "style": ["file:./banner.css"],
+  "category": "gallery",
+  "icon": "cover-image",
+  "keywords": ["banner", "hero"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "home-banner.php"
+  },
+  "align": "full"
+}

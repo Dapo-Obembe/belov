@@ -3,7 +3,7 @@
   "version": 2,
   "settings": {
     "layout": {
-      "contentSize": "1440px",
+      "contentSize": "1200px",
       "wideSize": "1440px"
     },
     "color": {
@@ -39,8 +39,8 @@
       "fontFamilies": [
         {
           "fontFamily": "'IBM Plex Sans', sans-serif",
-          "slug": "inter",
-          "name": "Body - Inter",
+          "slug": "ibmplexsans",
+          "name": "Body - IBM Plex Sans",
           "fontFace": [
             {
               "fontFamily": "'IBM Plex Sans', sans-serif",

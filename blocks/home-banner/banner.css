@@ -1,0 +1,9 @@
+.banner {
+  min-height: 620px;
+  width: 100%;
+}
+
+.banner__container {
+  width: 1200px;
+  min-height: 620px;
+}

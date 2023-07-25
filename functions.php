@@ -54,7 +54,8 @@ function belov_test_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'belov-test' ),
+			'primary' => esc_html__( 'Primary', 'belov-test' ),
+			'privacy' => esc_html__( 'Privacy', 'belov-test' ),
 		)
 	);
 
@@ -131,8 +132,7 @@ function belov_test_scripts() {
 	wp_enqueue_style( 'belov-test-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'belov-test-style', 'rtl', 'replace' );
 
-	//Block styles and scripts
-	wp_enqueue_style('belov-test-style-blocks', get_template_directory_uri() . '/assets/css/blocks.css');
+	 wp_enqueue_style('belov-styles', get_template_directory_uri() . '/assets/css/index.css');
 	wp_enqueue_script( 'belov-test-script', get_template_directory_uri() . '/assets/js/script.js', array(), _S_VERSION, true );
 
 	//Default script from _s theme.
@@ -151,3 +151,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+/*----------------------
+ACF BLOCKS
+--------*/
+function register_acf_blocks() {
+    register_block_type( __DIR__ . './blocks/home-banner');
+
+}
+add_action( 'init', 'register_acf_blocks' );

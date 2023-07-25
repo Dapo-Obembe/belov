@@ -1,0 +1,53 @@
+/* FONT FAMILY */
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+/*--------- HEADER TEMPLATE -------*/
+.header {
+}
+
+/*--------- FOOTER TEMPLATE -------*/
+
+@media screen and (width <= 767px) {
+  .footer {
+    padding: 0.5rem 1rem;
+  }
+  .footer__copyright {
+    padding-left: 20px !important;
+  }
+  .footer__copyright .footer--terms {
+    padding-left: 0.5rem 1rem !important;
+  }
+}
+
+.footer__logo {
+  align-self: self-start;
+}
+
+/* FOOTER NAV LINKS */
+.footer__container .footer__nav--items li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.footer__nav--items li a {
+  color: var(--wp--preset--color--belov-black);
+  text-decoration: none;
+}
+
+.footer__copyright {
+  border-top: 2px solid var(--wp--preset--color--belov-gray);
+  padding-top: 1rem;
+  padding-left: 120px;
+  width: 100%;
+}
