@@ -154,10 +154,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 /*----------------------
-ACF BLOCKS
+ACF BLOCKS REGISTRATION
 --------*/
 function register_acf_blocks() {
-    register_block_type( __DIR__ . './blocks/home-banner');
+    register_block_type( __DIR__ . './blocks/home-banner'); //Banner on the home page
+    register_block_type( __DIR__ . './blocks/services'); //Service section on the home page
+
 
 }
 add_action( 'init', 'register_acf_blocks' );

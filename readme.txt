@@ -15,6 +15,10 @@ License URI: LICENSE
 
 Belov Digital Test theme for job interview based on underscores starter theme.
 
+== TOOLS ==
+
+ACF Pro is used to create the blocks for the website except the Header and Footer templates.
+
 
 == Credits ==
 

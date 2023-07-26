@@ -1,0 +1,14 @@
+{
+  "name": "acf/services-block",
+  "title": "Services",
+  "description": "Block to showcase services",
+  "style": ["file:./service.css"],
+  "category": "gallery",
+  "icon": "universal-access",
+  "keywords": ["service", "what we do"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "service.php"
+  },
+  "align": "full"
+}

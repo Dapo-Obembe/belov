@@ -1,6 +1,6 @@
 <?php
 /**
- * Music Player Block Template.
+ * Home Page Banner Block Template.
  */
 
 // Support custom "anchor" values.
