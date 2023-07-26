@@ -1,0 +1,116 @@
+.service {
+  background-color: var(--wp--preset--color--belov-light-gray);
+  min-height: 650px;
+  width: 100%;
+}
+
+.service__container {
+  width: 1200px;
+  min-height: 650px;
+  margin: 0 auto;
+  display: flex;
+  gap: 5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (width <= 992px) {
+  .service__container {
+    width: 100%;
+    min-height: 650px;
+    gap: 2rem;
+    flex-direction: column;
+    padding: 5rem 0;
+  }
+
+  .service__container--image,
+  .service__container--contents {
+    flex-basis: 100%;
+  }
+}
+
+.service__container--image,
+.service__container--contents {
+  flex-basis: 50%;
+  padding: 0 1rem;
+}
+
+.service__container--image .image {
+  width: 100%;
+}
+
+.service__container--contents .title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--wp--preset--color--belov-gray);
+  margin: 0;
+}
+.service__container--contents .service-heading {
+  /* H2 */
+  font-size: clamp(1.5rem, 1.1667rem + 1.7778vw, 2.5rem);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0;
+}
+
+.service__container--contents .description {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  color: var(--wp--preset--color--belov-black);
+}
+
+.service__container--contents .service-lists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-lists .item {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--wp--preset--color--belov-gray);
+}
+/* MOBILE RESPONSIVE FOR SERVICE LIST */
+@media screen and (width <= 767px) {
+  .service__container--contents .service-lists {
+    display: flex;
+    flex-direction: column;
+    /* gap: 2rem; */
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .service-lists .item {
+    width: 100%;
+    display: flex;
+    /* gap: 4rem; */
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--wp--preset--color--belov-gray);
+    margin-bottom: -30px;
+  }
+}
+.item p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  color: var(--wp--preset--color--belov-black);
+}
+
+.item:hover p {
+  color: #2a63e2;
+}
+
+.icon:hover path:first-child {
+  fill: #2a63e2;
+}

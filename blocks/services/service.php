@@ -46,23 +46,28 @@ $service_lists                = get_field('service_lists');
                <?php } ?>
                
                <?php if( !empty( $section_description ) ){?>
-                    <p class="service-description"><?php echo $section_description; ?></p>
+                    <p class="description"><?php echo $section_description; ?></p>
                <?php } ?>
 
                <div class="service-lists">
-                    <div class="items">
-                         <?php if( have_rows('service_lists') ): ?>
-               
-                              <?php while (have_rows('service_lists')): the_row(); ?>
+                    
+                    <?php if( have_rows('service_lists') ): ?>
+          
+                         <?php while (have_rows('service_lists')): the_row(); ?>
 
-                                   <div>
-                                        <p><?php the_sub_field('service_name'); ?></p>
-                                        <a href="<?php the_sub_field('service_link'); ?>">LINK</a>
-                                   </div>
+                              <div class="item">
+                                   <p><?php the_sub_field('service_name'); ?></p>
+                                   <a href="<?php the_sub_field('service_link'); ?>" class="link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none" class="icon">
+                                        <path d="M25 12.5C25 19.4036 19.4036 25 12.5 25C5.59644 25 0 19.4036 0 12.5C0 5.59644 5.59644 0 12.5 0C19.4036 0 25 5.59644 25 12.5Z" fill="#030303"/>
+                                        <path d="M14.527 16.2163L13.7447 15.5068L16.819 12.669H6.08105V11.6555H16.819L13.7447 8.81761L14.527 8.10815L18.9189 12.1622L14.527 16.2163Z" fill="white"/>
+                                        </svg>
+                                   </a>
+                              </div>
 
-                              <?php endwhile; ?>
-                         <?php endif; ?>
-                    </div>
+                         <?php endwhile; ?>
+                    <?php endif; ?>
+                    
                </div>
           </div>
      </div>

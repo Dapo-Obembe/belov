@@ -31,9 +31,9 @@ $background_color = get_field( 'background_color' ); //Let user change to backgr
 
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($class_name); ?>" style="background-image: url(<?php echo the_field('background_image'); ?>); background-color: <?php the_field('background_color'); ?>">  
-     <div class="banner__container">
-          <div class="banner__container--row1">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($class_name); ?>"  style="background-color: <?php the_field('background_color'); ?>">  
+     <div class="banner__container" style="background-image: url(<?php echo the_field('background_image'); ?>);">
+          <div class="banner__container--row">
                <div class="banner--content">
                     <?php if( !empty($banner_title ) ){?>
                          <h1><?php echo esc_attr( $banner_title  ); ?></h1>

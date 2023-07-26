@@ -1,28 +1,39 @@
 .banner {
   height: 620px;
   width: 100%;
+  /* overflow: hidden; */
+}
+
+.banner__container {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  height: 620px;
   background: #020526;
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
-  overflow: hidden;
 }
 
-.banner__container {
+.banner__container--row {
   width: 1200px;
+  display: grid;
+  place-items: flex-start;
   margin: 0 auto;
+  padding: 6rem 0;
+  /* background-color: red; */
 }
 
-.banner__container--row1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 620px;
+@media screen and (width <= 992px) {
+  .banner__container--row {
+    width: 100%;
+  }
 }
 
-.banner__container--row1 .banner--content {
-  flex-basis: 50%;
+.banner--content {
+  width: 50%;
 }
 
 .banner--content h1 {
@@ -76,7 +87,8 @@
 /* THE LISTED SERVICE SECTION */
 .service-list {
   height: 70px;
-  margin-top: -65px;
+  width: 100%;
+  margin-top: -90px;
   background-color: transparent;
   border-top: 1px solid var(--wp--preset--color--belov-gray);
 }
@@ -87,6 +99,16 @@
   align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
+}
+
+.sliding-texts::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.sliding-texts {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .sliding-texts p {
@@ -100,24 +122,25 @@
 @media screen and (width <= 767px) {
   .banner {
     min-height: 511px;
-    background-image: none !important;
     padding: 0 1rem;
   }
 
   .banner__container {
     width: 100%;
     margin: 0 auto;
+    background-image: none !important;
   }
 
-  .banner__container--row1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 620px;
+  .banner__container--row {
+    width: 100%;
+    display: grid;
+    place-items: flex-start;
+    margin: 0 auto;
+    padding: 6rem 0;
   }
 
-  .banner__container--row1 .banner--content {
-    flex-basis: 100%;
+  .banner--content {
+    width: 100%;
   }
 
   .banner--content .banner--cta {
