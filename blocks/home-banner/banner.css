@@ -1,9 +1,150 @@
 .banner {
-  min-height: 620px;
+  height: 620px;
   width: 100%;
+  background: #020526;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  overflow: hidden;
 }
 
 .banner__container {
   width: 1200px;
+  margin: 0 auto;
+}
+
+.banner__container--row1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   min-height: 620px;
+}
+
+.banner__container--row1 .banner--content {
+  flex-basis: 50%;
+}
+
+.banner--content h1 {
+  font-size: clamp(2.1875rem, 2.0417rem + 0.7778vw, 2.625rem);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--wp--preset--color--belov-white);
+}
+
+.banner--content h2 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--wp--preset--color--belov-white);
+}
+
+.banner--content .banner--cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* CTA BUTTON */
+
+.banner--cta button {
+  background-color: var(--wp--preset--color--belov-blue);
+  border-radius: 25px;
+  border: none;
+  display: inline-flex;
+  height: 50px;
+  padding: 12px 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner--cta button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.banner--cta p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  color: var(--wp--preset--color--belov-gray);
+}
+
+/* THE LISTED SERVICE SECTION */
+.service-list {
+  height: 70px;
+  margin-top: -65px;
+  background-color: transparent;
+  border-top: 1px solid var(--wp--preset--color--belov-gray);
+}
+
+.service-list .sliding-texts {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.sliding-texts p {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+}
+
+/* ------------- MOBILE RESPONSIVE STYLING -------------- */
+
+@media screen and (width <= 767px) {
+  .banner {
+    min-height: 511px;
+    background-image: none !important;
+    padding: 0 1rem;
+  }
+
+  .banner__container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .banner__container--row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 620px;
+  }
+
+  .banner__container--row1 .banner--content {
+    flex-basis: 100%;
+  }
+
+  .banner--content .banner--cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* THE LISTED SERVICE SECTION */
+  .service-list {
+    display: flex;
+  }
+
+  .service-list .sliding-texts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .sliding-texts p {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    width: fit-content;
+    margin: 0 1rem;
+  }
 }

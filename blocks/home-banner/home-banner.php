@@ -20,19 +20,21 @@ if ( ! empty( $block['align'] ) ) {
 }
 
 // Load values and assign defaults.
-$background_image             = get_field('background_image');
-$banner_title                 = get_field('banner_heading');
+$background_image             = get_field('background_image') ?: 268;
+$banner_title                 = get_field('banner_heading') ?: 'Add a title here';
 $banner_description           = get_field('banner_description');
-$banner_link                  = get_field('hero_cta_link');
+$banner_button_link           = get_field('hero_button_link');
+$button_link_text             = get_field('button_text');
 $banner_cta_text              = get_field('cta_text');
 $banner_slides                = get_field('banner_text_slides');
+$background_color = get_field( 'background_color' ); //Let user change to background that matches the background image
 
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($class_name); ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($class_name); ?>" style="background-image: url(<?php echo the_field('background_image'); ?>); background-color: <?php the_field('background_color'); ?>">  
      <div class="banner__container">
           <div class="banner__container--row1">
-               <div class="left">
+               <div class="banner--content">
                     <?php if( !empty($banner_title ) ){?>
                          <h1><?php echo esc_attr( $banner_title  ); ?></h1>
                     <?php } ?>
@@ -40,14 +42,26 @@ $banner_slides                = get_field('banner_text_slides');
                     <?php if( !empty($banner_description ) ){?>
                          <h2><?php echo esc_attr( $banner_description  ); ?></h2>
                     <?php } ?>
-               </div>
-               <div class="right">
-                    <div class="banner--image">
-                         <?php echo wp_get_attachment_image( $background_image, 'full' ); ?>
+                    <div class="banner--cta">
+                         <?php if( !empty( $banner_button_link ) ){?>
+                              <button class="banner-button"><a href="<?php echo esc_attr( $banner_button_link ); ?>" ><?php echo esc_attr( $button_link_text ); ?></a></button>
+                              <p><?php echo esc_attr( $banner_cta_text ); ?></p>
+                         <?php } ?>
                     </div>
                </div>
           </div>
-           <div class="banner__container--row2">
-          </div>
      </div>
 </section>
+
+<div class="service-list">
+     <div class="sliding-texts">
+          <?php if( have_rows('banner_text_slides') ): ?>
+               
+               <?php while (have_rows('banner_text_slides')): the_row(); ?>
+
+                    <p><?php the_sub_field('item'); ?></p>
+
+               <?php endwhile; ?>
+          <?php endif; ?>
+     </div>
+</div>
