@@ -1,0 +1,123 @@
+/* CSS VARIABLES */
+
+:root {
+  --grey-background: #e8e7e0;
+}
+
+.project {
+  width: 100%;
+  background-color: var(--grey-background);
+  min-height: 650px;
+  padding: 3rem 0;
+  overflow: hidden;
+}
+
+.project__container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.project__container--title {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  width: 50%;
+}
+
+.project__container--title p,
+.project__container--title h2 {
+  margin: 0;
+}
+
+.project__container--title .title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  color: #999;
+}
+
+.project__container--title h2 {
+  font-size: clamp(1.375rem, 1rem + 2vw, 2.5rem);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--wp--preset--color--belov-black);
+}
+
+.project__box {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+
+/* Make the project box responsive */
+@media screen and (width <= 767px) {
+  .project__box {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+}
+
+.single-project {
+  min-width: 200px;
+  margin: 0 auto;
+}
+
+.single-project img {
+  max-width: 100%;
+  min-width: 300px;
+
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .project__container--list {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: flex-start;
+  }
+}
+
+.single-project h3 {
+  font-size: clamp(1.125rem, 1rem + 0.6667vw, 1.5rem);
+  margin: 0;
+}
+
+.single-project h3 a {
+  color: var(--wp--preset--color--belov-black);
+  text-decoration: none;
+}
+
+.single-project .project-categories {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.project-categories .category-lists {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.category-lists li {
+  border: 1px solid #bbb;
+  border-radius: 20px;
+  background: #e8e7e0;
+  width: fit-content;
+  display: flex;
+  height: 33px;
+  padding: 11px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}

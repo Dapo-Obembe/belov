@@ -1,0 +1,14 @@
+{
+  "name": "acf/projects-block",
+  "title": "Projects",
+  "description": "Block to showcase services",
+  "style": ["file:./project.css"],
+  "category": "gallery",
+  "icon": "universal-access",
+  "keywords": ["project", "cases", "case study"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "project.php"
+  },
+  "align": "full"
+}
