@@ -161,6 +161,9 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . './blocks/services'); //Service section on the home page
     register_block_type( __DIR__ . './blocks/projects'); //Project section on the home page
     register_block_type( __DIR__ . './blocks/manifesto'); //Manifesto section on the home page
+    register_block_type( __DIR__ . './blocks/clients'); //Client section on the home page
+    register_block_type( __DIR__ . './blocks/newsletter'); //Newsletter section on the home page
+    register_block_type( __DIR__ . './blocks/testimonials'); //Testimonial section on the home page
 
 
 

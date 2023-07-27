@@ -1,0 +1,14 @@
+{
+  "name": "newsletter-block",
+  "title": "Newsletter",
+  "description": "Block to showcase Newsletter",
+  "style": ["file:./newsletter.css"],
+  "category": "gallery",
+  "icon": "universal-access",
+  "keywords": ["newsletter", "join us"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "newsletter.php"
+  },
+  "align": "full"
+}

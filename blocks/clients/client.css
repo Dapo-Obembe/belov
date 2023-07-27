@@ -1,0 +1,79 @@
+.clients {
+  width: 100%;
+  background: #f4f3ef;
+  padding: 3rem 0;
+}
+
+.clients__container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media screen and (width <= 767px) {
+  .clients__container {
+    width: 100%;
+  }
+}
+
+.clients__container--headings {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.clients__container--headings p,
+.clients__container--headings h2 {
+  margin: 0;
+}
+
+.clients__container--headings p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--wp--preset--color--belov-gray);
+}
+
+.clients__container--headings h2 {
+  font-size: clamp(1.375rem, 1rem + 2vw, 2.5rem);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--wp--preset--color--belov-black);
+}
+
+.clients__box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (width <= 767px) {
+  .clients__box {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .clients__box .logo {
+    width: 100px;
+    height: 99px;
+    display: grid;
+    place-items: center;
+  }
+
+  .logo img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+.clients__box .logo {
+  width: 250px;
+  height: 182.878px;
+  flex-shrink: 0;
+  border: 1px solid #d6d6d6;
+  background: #f4f3ef;
+  display: grid;
+  place-items: center;
+}

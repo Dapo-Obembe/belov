@@ -1,0 +1,14 @@
+{
+  "name": "acf/clients-block",
+  "title": "Client",
+  "description": "Block to showcase clients logo",
+  "style": ["file:./client.css"],
+  "category": "gallery",
+  "icon": "universal-access",
+  "keywords": ["clients"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "clients.php"
+  },
+  "align": "full"
+}

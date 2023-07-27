@@ -1,0 +1,14 @@
+{
+  "name": "acf/testimonial-block",
+  "title": "Testimonial",
+  "description": "Block to showcase testimonials",
+  "style": ["file:./testimonial.css"],
+  "category": "gallery",
+  "icon": "universal-access",
+  "keywords": ["testimonial", "what people say"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "testimonial.php"
+  },
+  "align": "full"
+}
