@@ -1,0 +1,14 @@
+{
+  "name": "acf/manifesto-block",
+  "title": "Manifesto",
+  "description": "Block to showcase manifesto",
+  "style": ["file:./manifesto.css"],
+  "category": "gallery",
+  "icon": "universal-access",
+  "keywords": ["manifesto", "story"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "manifesto.php"
+  },
+  "align": "full"
+}

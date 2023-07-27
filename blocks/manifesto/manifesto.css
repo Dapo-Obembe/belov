@@ -1,0 +1,100 @@
+.manifesto {
+  width: 100%;
+  background: #f4f3ef;
+  padding: 3rem 0;
+}
+
+.manifesto__container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media screen and (width <= 767px) {
+  .manifesto__container {
+    width: 100%;
+  }
+}
+
+.manifesto__container--headings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.manifesto__container--headings p,
+.manifesto__container--headings h2 {
+  margin: 0;
+}
+
+.manifesto__container--headings p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--wp--preset--color--belov-gray);
+}
+
+.manifesto__container--headings h2 {
+  font-size: clamp(1.375rem, 1rem + 2vw, 2.5rem);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--wp--preset--color--belov-black);
+}
+
+.manifesto__contents {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8rem;
+}
+
+/* Make the project box responsive */
+@media screen and (width <= 767px) {
+  .manifesto__contents {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 3rem;
+  }
+}
+
+.manifesto__contents .description-box {
+  align-self: center;
+}
+
+.description-box p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--wp--preset--color--belov-black);
+}
+
+.description-box a {
+  display: inline-flex;
+  height: 50px;
+  padding: 12px 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: var(--wp--preset--color--belov-black);
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.description-box .team-box {
+  margin-top: 5rem;
+}
+
+.team-box p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--wp--preset--color--belov-gray);
+}
