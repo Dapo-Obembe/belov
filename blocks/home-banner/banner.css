@@ -1,7 +1,6 @@
 .banner {
   height: 620px;
   width: 100%;
-  /* overflow: hidden; */
 }
 
 .banner__container {
@@ -23,7 +22,6 @@
   place-items: flex-start;
   margin: 0 auto;
   padding: 6rem 0;
-  /* background-color: red; */
 }
 
 @media screen and (width <= 992px) {

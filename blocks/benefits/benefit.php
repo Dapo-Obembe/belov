@@ -46,19 +46,14 @@ $button_link                  = get_field('section_button_link');
           <div class="benefit__contents">
                <div class="benefit-box">
                     <?php if(have_rows('all_benefits')):?>
-                         
                          <?php while(have_rows('all_benefits')): the_row();?>
-                         
                          <button class="benefit-header">
                               <?php the_sub_field('benefit_header');?>
                          </button>
-                         
                          <div class="panel">
                               <p><?php the_sub_field('benefit_content');?></p>
                          </div>
-                         
                          <?php endwhile;?>
-                         
 			     <?php endif;?>
                </div>
           </div>

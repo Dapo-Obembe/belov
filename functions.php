@@ -138,10 +138,6 @@ function belov_test_scripts() {
 	 wp_enqueue_style('swiper_styles', '//cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css');
      wp_enqueue_script( 'swiper_script', '//cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', array ( 'jquery' ), 1.1, true);
 
-	wp_enqueue_script( 'fontawesome', '//kit.fontawesome.com/dc8c325aa0.js', array ( 'jquery' ), 1.1, true);
-
-	
-
 	//Default script from _s theme.
 	wp_enqueue_script( 'belov-scripts', get_template_directory_uri() . '/assets/js/script.js', array(), _S_VERSION, true );
 

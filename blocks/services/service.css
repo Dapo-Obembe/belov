@@ -85,14 +85,12 @@
   .service__container--contents .service-lists {
     display: flex;
     flex-direction: column;
-    /* gap: 2rem; */
     justify-content: flex-start;
     align-items: center;
   }
   .service-lists .item {
     width: 100%;
     display: flex;
-    /* gap: 4rem; */
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--wp--preset--color--belov-gray);

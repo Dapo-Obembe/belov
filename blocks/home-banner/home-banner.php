@@ -27,7 +27,7 @@ $banner_button_link           = get_field('hero_button_link');
 $button_link_text             = get_field('button_text');
 $banner_cta_text              = get_field('cta_text');
 $banner_slides                = get_field('banner_text_slides');
-$background_color = get_field( 'background_color' ); //Let user change to background that matches the background image
+$background_color             = get_field( 'background_color' ); //Let user change to background that matches the background image
 
 ?>
 
