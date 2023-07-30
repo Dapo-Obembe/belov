@@ -135,8 +135,15 @@ function belov_test_scripts() {
 	 wp_enqueue_style('belov-styles', get_template_directory_uri() . '/assets/css/index.css');
 	wp_enqueue_script( 'belov-test-script', get_template_directory_uri() . '/assets/js/script.js', array(), _S_VERSION, true );
 
+	 wp_enqueue_style('swiper_styles', '//cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css');
+     wp_enqueue_script( 'swiper_script', '//cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', array ( 'jquery' ), 1.1, true);
+
+	wp_enqueue_script( 'fontawesome', '//kit.fontawesome.com/dc8c325aa0.js', array ( 'jquery' ), 1.1, true);
+
+	
+
 	//Default script from _s theme.
-	// wp_enqueue_script( 'belov-test-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'belov-scripts', get_template_directory_uri() . '/assets/js/script.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -164,8 +171,7 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . './blocks/clients'); //Client section on the home page
     register_block_type( __DIR__ . './blocks/newsletter'); //Newsletter section on the home page
     register_block_type( __DIR__ . './blocks/testimonials'); //Testimonial section on the home page
-
-
+    register_block_type( __DIR__ . './blocks/benefits'); //Benefits section on the home page
 
 }
 add_action( 'init', 'register_acf_blocks' );

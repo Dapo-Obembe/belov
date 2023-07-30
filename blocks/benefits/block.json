@@ -1,0 +1,14 @@
+{
+  "name": "benefit-block",
+  "title": "Benefits",
+  "description": "Block to showcase Benefits",
+  "style": ["file:./benefit.css"],
+  "category": "gallery",
+  "icon": "universal-access",
+  "keywords": ["benefit", "what we offer"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "benefit.php"
+  },
+  "align": "full"
+}
